@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLADE — барбер с выездом на дом</title>
-  <meta name="description" content="Мужские стрижки и оформление бороды с выездом на дом, в офис или на мероприятие.">
+  <title>SiricBarberfast — барбер с выездом на дом</title>
+  <meta name="description" content="Мужские стрижки и оформление бороды с выездом на дом, в офис или на мероприятие. Цены от 400 ₴, запись онлайн.">
+
+  <!-- Цвет панели браузера на телефоне -->
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph: как сайт выглядит, когда ссылкой делятся в Telegram, Viber, Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SiricBarberfast — барбер с выездом на дом">
+  <meta property="og:description" content="Стрижка и борода у тебя дома или в офисе. Без очередей.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=630&q=75&auto=format&fit=crop">
+
+  <!-- Иконка во вкладке браузера (ножницы на золотом фоне), нарисована прямо в коде -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c9a45c'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle'%3E%E2%9C%82%3C/text%3E%3C/svg%3E">
 
   <!-- Шрифты: Oswald для заголовков, Inter для текста -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +34,7 @@
 
       <nav class="nav" id="nav">
         <a href="#services">Услуги</a>
+        <a href="#gallery">Работы</a>
         <a href="#how">Как это работает</a>
         <a href="#calc">Калькулятор</a>
         <a href="#reviews">Отзывы</a>
@@ -57,8 +70,11 @@
             <li><strong>45 мин</strong> стрижка</li>
           </ul>
         </div>
-        <!-- Место под фото барбера. Сейчас декоративный круг с ножницами -->
-        <div class="hero__photo" aria-hidden="true">✂</div>
+        <!-- Фото барбера. Для реального клиента замени ссылку на его фото: src="img/barber.jpg" -->
+        <div class="hero__photo">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=75&auto=format&fit=crop"
+               alt="Клиент в кресле барбера" width="800" height="800">
+        </div>
       </div>
     </section>
 
@@ -98,8 +114,45 @@
       </div>
     </section>
 
+    <!-- ===== ГАЛЕРЕЯ РАБОТ ===== -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <h2 class="section__title">Мои работы</h2>
+        <p class="section__subtitle">Нажми на фото, чтобы посмотреть крупнее</p>
+
+        <!-- Фото с Unsplash (бесплатная лицензия). Для реального барбера
+             замени их на фото его работ: положи файлы в папку img и пиши src="img/1.jpg" -->
+        <div class="gallery">
+          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1400&q=80&auto=format">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&q=70&auto=format&fit=crop" alt="Окантовка опасной бритвой" loading="lazy">
+          </button>
+          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?w=1400&q=80&auto=format">
+            <img src="https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?w=600&h=600&q=70&auto=format&fit=crop" alt="Стрижка бороды ножницами" loading="lazy">
+          </button>
+          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=1400&q=80&auto=format">
+            <img src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=600&h=600&q=70&auto=format&fit=crop" alt="Стрижка филировочными ножницами" loading="lazy">
+          </button>
+          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1400&q=80&auto=format">
+            <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&h=600&q=70&auto=format&fit=crop" alt="Оформление бороды" loading="lazy">
+          </button>
+          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1400&q=80&auto=format">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&h=600&q=70&auto=format&fit=crop" alt="Укладка феном" loading="lazy">
+          </button>
+          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=1400&q=80&auto=format">
+            <img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=600&h=600&q=70&auto=format&fit=crop" alt="Мужская стрижка" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Окно для просмотра фото крупно (лайтбокс). <dialog> — встроенное в браузер всплывающее окно -->
+    <dialog class="lightbox" id="lightbox">
+      <button class="lightbox__close" aria-label="Закрыть">×</button>
+      <img src="" alt="" id="lightbox-img">
+    </dialog>
+
     <!-- ===== КАК ЭТО РАБОТАЕТ ===== -->
-    <section class="section section--alt" id="how">
+    <section class="section" id="how">
       <div class="container">
         <h2 class="section__title">Как это работает</h2>
         <ol class="steps">
@@ -116,7 +169,7 @@
           <li class="step">
             <span class="step__num">03</span>
             <h3>Приезжаю к тебе</h3>
-            <p>С инструментом, накидкой и косметикой. От тебя нужен только стул. Убираю за собой..</p>
+            <p>С инструментом, накидкой и косметикой. От тебя нужен только стул. Убираю за собой.</p>
           </li>
           <li class="step">
             <span class="step__num">04</span>
@@ -128,7 +181,7 @@
     </section>
 
     <!-- ===== КАЛЬКУЛЯТОР СТОИМОСТИ ===== -->
-    <section class="section" id="calc">
+    <section class="section section--alt" id="calc">
       <div class="container calc">
         <div>
           <h2 class="section__title">Посчитай стоимость</h2>
@@ -170,7 +223,7 @@
     </section>
 
     <!-- ===== ОТЗЫВЫ ===== -->
-    <section class="section section--alt" id="reviews">
+    <section class="section" id="reviews">
       <div class="container">
         <h2 class="section__title">Отзывы</h2>
         <div class="reviews">
@@ -191,7 +244,7 @@
     </section>
 
     <!-- ===== ЧАСТЫЕ ВОПРОСЫ (аккордеон) ===== -->
-    <section class="section" id="faq">
+    <section class="section section--alt" id="faq">
       <div class="container container--narrow">
         <h2 class="section__title">Частые вопросы</h2>
 
@@ -218,7 +271,7 @@
     </section>
 
     <!-- ===== ЗАПИСЬ ===== -->
-    <section class="section section--alt" id="booking">
+    <section class="section" id="booking">
       <div class="container booking">
         <div>
           <h2 class="section__title">Записаться</h2>
@@ -249,16 +302,36 @@
               <input type="time" name="time" min="09:00" max="20:00" required>
             </label>
           </div>
-          <button type="submit" class="btn">Отправить заявку</button>
-          <p class="form__message" id="form-message"></p>
+          <label>Услуга
+            <select name="service">
+              <option>Мужская стрижка</option>
+              <option>Оформление бороды</option>
+              <option selected>Стрижка + борода</option>
+              <option>Детская стрижка</option>
+              <option>Бритьё опасной бритвой</option>
+              <option>Жених и друзья</option>
+            </select>
+          </label>
+          <!-- Ловушка для спам-ботов: человек это поле не видит и не заполняет -->
+          <input type="text" name="website" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button type="submit" class="btn" id="form-button">Отправить заявку</button>
+          <p class="form__consent">Нажимая кнопку, ты соглашаешься, что мы используем твои данные только для связи по этой записи.</p>
+          <p class="form__message" id="form-message" role="status"></p>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- Нижняя панель с кнопками — видна только на телефоне -->
+  <div class="mobile-cta">
+    <a href="tel:+380000000000" class="btn btn--outline">Позвонить</a>
+    <a href="#booking" class="btn">Записаться</a>
+  </div>
+
   <footer class="footer">
     <div class="container">
-      © <span id="year"></span> BLADE · барбер с выездом
+      © <span id="year"></span> SiricBarberfast · барбер с выездом
       <!-- Сайт учебный: честно предупреждаем, что данные выдуманы -->
       <p class="footer__note">Учебный проект. Название, цены, контакты и отзывы вымышлены.</p>
     </div>
