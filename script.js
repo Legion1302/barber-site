@@ -135,24 +135,5 @@ form.addEventListener('submit', async (e) => {
 });
 
 
-// ===== 4.1 ГАЛЕРЕЯ — ПРОСМОТР ФОТО КРУПНО =====
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-document.querySelectorAll('.gallery__item').forEach((item) => {
-  item.addEventListener('click', () => {
-    // Берём большую версию фото из атрибута data-full
-    lightboxImg.src = item.dataset.full;
-    lightboxImg.alt = item.querySelector('img').alt;
-    lightbox.showModal(); // открываем окно
-  });
-});
-
-// Закрываем по крестику или по клику на тёмный фон вокруг фото
-lightbox.addEventListener('click', (e) => {
-  if (e.target !== lightboxImg) lightbox.close();
-});
-
-
 // ===== 5. ГОД В ПОДВАЛЕ =====
 document.getElementById('year').textContent = new Date().getFullYear();

@@ -23,7 +23,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- ?v=2 — номер версии. После изменения style.css увеличивай его (v=3, v=4...),
+       тогда браузеры посетителей скачают новый файл, а не возьмут старый из памяти -->
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -34,7 +36,6 @@
 
       <nav class="nav" id="nav">
         <a href="#services">Услуги</a>
-        <a href="#gallery">Работы</a>
         <a href="#how">Как это работает</a>
         <a href="#calc">Калькулятор</a>
         <a href="#reviews">Отзывы</a>
@@ -114,45 +115,8 @@
       </div>
     </section>
 
-    <!-- ===== ГАЛЕРЕЯ РАБОТ ===== -->
-    <section class="section section--alt" id="gallery">
-      <div class="container">
-        <h2 class="section__title">Мои работы</h2>
-        <p class="section__subtitle">Нажми на фото, чтобы посмотреть крупнее</p>
-
-        <!-- Фото с Unsplash (бесплатная лицензия). Для реального барбера
-             замени их на фото его работ: положи файлы в папку img и пиши src="img/1.jpg" -->
-        <div class="gallery">
-          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1400&q=80&auto=format">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&q=70&auto=format&fit=crop" alt="Окантовка опасной бритвой" loading="lazy">
-          </button>
-          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?w=1400&q=80&auto=format">
-            <img src="https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?w=600&h=600&q=70&auto=format&fit=crop" alt="Стрижка бороды ножницами" loading="lazy">
-          </button>
-          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=1400&q=80&auto=format">
-            <img src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=600&h=600&q=70&auto=format&fit=crop" alt="Стрижка филировочными ножницами" loading="lazy">
-          </button>
-          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1400&q=80&auto=format">
-            <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&h=600&q=70&auto=format&fit=crop" alt="Оформление бороды" loading="lazy">
-          </button>
-          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1400&q=80&auto=format">
-            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&h=600&q=70&auto=format&fit=crop" alt="Укладка феном" loading="lazy">
-          </button>
-          <button class="gallery__item" data-full="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=1400&q=80&auto=format">
-            <img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=600&h=600&q=70&auto=format&fit=crop" alt="Мужская стрижка" loading="lazy">
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Окно для просмотра фото крупно (лайтбокс). <dialog> — встроенное в браузер всплывающее окно -->
-    <dialog class="lightbox" id="lightbox">
-      <button class="lightbox__close" aria-label="Закрыть">×</button>
-      <img src="" alt="" id="lightbox-img">
-    </dialog>
-
     <!-- ===== КАК ЭТО РАБОТАЕТ ===== -->
-    <section class="section" id="how">
+    <section class="section section--alt" id="how">
       <div class="container">
         <h2 class="section__title">Как это работает</h2>
         <ol class="steps">
@@ -181,7 +145,7 @@
     </section>
 
     <!-- ===== КАЛЬКУЛЯТОР СТОИМОСТИ ===== -->
-    <section class="section section--alt" id="calc">
+    <section class="section" id="calc">
       <div class="container calc">
         <div>
           <h2 class="section__title">Посчитай стоимость</h2>
@@ -223,7 +187,7 @@
     </section>
 
     <!-- ===== ОТЗЫВЫ ===== -->
-    <section class="section" id="reviews">
+    <section class="section section--alt" id="reviews">
       <div class="container">
         <h2 class="section__title">Отзывы</h2>
         <div class="reviews">
@@ -244,7 +208,7 @@
     </section>
 
     <!-- ===== ЧАСТЫЕ ВОПРОСЫ (аккордеон) ===== -->
-    <section class="section section--alt" id="faq">
+    <section class="section" id="faq">
       <div class="container container--narrow">
         <h2 class="section__title">Частые вопросы</h2>
 
@@ -271,7 +235,7 @@
     </section>
 
     <!-- ===== ЗАПИСЬ ===== -->
-    <section class="section" id="booking">
+    <section class="section section--alt" id="booking">
       <div class="container booking">
         <div>
           <h2 class="section__title">Записаться</h2>
@@ -337,6 +301,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ?v=2 — номер версии, как у style.css выше -->
+  <script src="script.js?v=2"></script>
 </body>
 </html>
