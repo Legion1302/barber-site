@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLADE — барбер с выездом на дом</title>
+  <meta name="description" content="Мужские стрижки и оформление бороды с выездом на дом, в офис или на мероприятие.">
+
+  <!-- Шрифты: Oswald для заголовков, Inter для текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">SiricBarberfast<span>.</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#services">Услуги</a>
+        <a href="#how">Как это работает</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#booking" class="btn btn--small">Записаться</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag">Барбер с выездом</p>
+          <h1 class="hero__title">Стрижка там,<br>где <em>удобно тебе</em></h1>
+          <p class="hero__text">
+            Приеду домой, в офис или на мероприятие со своим инструментом.
+            Без очередей и дороги в барбершоп.
+          </p>
+          <div class="hero__buttons">
+            <a href="#booking" class="btn">Записаться</a>
+            <a href="#services" class="btn btn--outline">Цены</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>500+</strong> клиентов</li>
+            <li><strong>6 лет</strong> опыта</li>
+            <li><strong>45 мин</strong> стрижка</li>
+          </ul>
+        </div>
+        <!-- Место под фото барбера. Сейчас декоративный круг с ножницами -->
+        <div class="hero__photo" aria-hidden="true">✂</div>
+      </div>
+    </section>
+
+    <!-- ===== УСЛУГИ И ЦЕНЫ ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section__title">Услуги и цены</h2>
+        <p class="section__subtitle">Цена уже включает выезд по городу</p>
+
+        <div class="prices">
+          <div class="price">
+            <div class="price__head"><h3>Мужская стрижка</h3><span>600 ₴</span></div>
+            <p>Консультация, стрижка, мытьё головы, укладка.</p>
+          </div>
+          <div class="price">
+            <div class="price__head"><h3>Оформление бороды</h3><span>400 ₴</span></div>
+            <p>Моделирование формы, контуры, уход маслом.</p>
+          </div>
+          <div class="price price--hit">
+            <div class="price__badge">Хит</div>
+            <div class="price__head"><h3>Стрижка + борода</h3><span>900 ₴</span></div>
+            <p>Полный образ за один визит. Выгоднее, чем по отдельности.</p>
+          </div>
+          <div class="price">
+            <div class="price__head"><h3>Детская стрижка</h3><span>450 ₴</span></div>
+            <p>Для детей до 12 лет. Спокойно и без слёз — ведь дома.</p>
+          </div>
+          <div class="price">
+            <div class="price__head"><h3>Бритьё опасной бритвой</h3><span>500 ₴</span></div>
+            <p>Распаривание горячим полотенцем и идеально гладкая кожа.</p>
+          </div>
+          <div class="price">
+            <div class="price__head"><h3>Жених и друзья</h3><span>от 2 500 ₴</span></div>
+            <p>Выезд в день свадьбы: стрижки и бороды для всей компании.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== КАК ЭТО РАБОТАЕТ ===== -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <h2 class="section__title">Как это работает</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">01</span>
+            <h3>Оставляешь заявку</h3>
+            <p>Через форму на сайте, в Telegram или по телефону.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">02</span>
+            <h3>Согласуем время</h3>
+            <p>Подтверждаю дату, адрес и услугу в течение 15 минут.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">03</span>
+            <h3>Приезжаю к тебе</h3>
+            <p>С инструментом, накидкой и косметикой. От тебя нужен только стул. Убираю за собой..</p>
+          </li>
+          <li class="step">
+            <span class="step__num">04</span>
+            <h3>Ты выглядишь отлично</h3>
+            <p>Оплата наличными или картой после стрижки.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== КАЛЬКУЛЯТОР СТОИМОСТИ ===== -->
+    <section class="section" id="calc">
+      <div class="container calc">
+        <div>
+          <h2 class="section__title">Посчитай стоимость</h2>
+          <p class="muted">
+            Выбери услугу и количество человек. Если стрижёмся компанией —
+            скидка 10% с третьего человека.
+          </p>
+        </div>
+
+        <div class="calc__box">
+          <label>Услуга
+            <!-- value — цена услуги. JavaScript берёт её отсюда -->
+            <select id="calc-service">
+              <option value="600">Мужская стрижка — 600 ₴</option>
+              <option value="400">Оформление бороды — 400 ₴</option>
+              <option value="900" selected>Стрижка + борода — 900 ₴</option>
+              <option value="450">Детская стрижка — 450 ₴</option>
+              <option value="500">Бритьё опасной бритвой — 500 ₴</option>
+            </select>
+          </label>
+
+          <label>Сколько человек: <strong id="calc-people-value">1</strong>
+            <input type="range" id="calc-people" min="1" max="10" value="1">
+          </label>
+
+          <label>Где стрижёмся
+            <select id="calc-zone">
+              <option value="0">В пределах города — бесплатно</option>
+              <option value="200">Пригород — +200 ₴</option>
+            </select>
+          </label>
+
+          <div class="calc__total">
+            Итого: <span id="calc-total">900 ₴</span>
+          </div>
+          <p class="calc__note" id="calc-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ОТЗЫВЫ ===== -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <h2 class="section__title">Отзывы</h2>
+        <div class="reviews">
+          <blockquote class="review">
+            <p>«Вызвал перед важной встречей прямо в офис. За 40 минут сделал стрижку и бороду, коллеги оценили.»</p>
+            <cite>Андрей · стрижка + борода</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>«Сын боится парикмахерских, а дома спокойно сидел и смотрел мультики. Будем звать ещё.»</p>
+            <cite>Ольга · детская стрижка</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>«Заказали на утро свадьбы для жениха и пяти друзей. Все успели, все красивые!»</p>
+            <cite>Максим · пакет «Жених и друзья»</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ЧАСТЫЕ ВОПРОСЫ (аккордеон) ===== -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <h2 class="section__title">Частые вопросы</h2>
+
+        <!-- Каждый вопрос — кнопка. По клику JavaScript раскрывает ответ -->
+        <div class="faq">
+          <div class="faq__item">
+            <button class="faq__question">Что нужно подготовить к приезду?</button>
+            <div class="faq__answer"><p>Только стул и немного места рядом с розеткой. Всё остальное привезу с собой.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">А волосы по всей квартире?</button>
+            <div class="faq__answer"><p>Использую накидку и коврик, после стрижки всё убираю пылесосом.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">Инструменты стерильные?</button>
+            <div class="faq__answer"><p>Да. Инструменты дезинфицируются после каждого клиента, лезвия одноразовые.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">Как отменить или перенести запись?</button>
+            <div class="faq__answer"><p>Напиши в Telegram минимум за 3 часа — перенесём бесплатно.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ЗАПИСЬ ===== -->
+    <section class="section section--alt" id="booking">
+      <div class="container booking">
+        <div>
+          <h2 class="section__title">Записаться</h2>
+          <p class="muted">Оставь заявку, и я свяжусь с тобой, чтобы подтвердить время.</p>
+          <ul class="contacts">
+            <li>📞 <a href="tel:+380000000000">+380 00 000 00 00</a></li>
+            <li>✈️ <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+            <li>📷 <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li>🕘 Ежедневно 9:00 – 21:00</li>
+          </ul>
+        </div>
+
+        <form class="form" id="booking-form">
+          <label>Имя
+            <input type="text" name="name" required placeholder="Как к тебе обращаться">
+          </label>
+          <label>Телефон
+            <input type="tel" name="phone" required placeholder="+380 __ ___ __ __">
+          </label>
+          <label>Адрес
+            <input type="text" name="address" required placeholder="Улица, дом, квартира">
+          </label>
+          <div class="form__row">
+            <label>Дата
+              <input type="date" name="date" required>
+            </label>
+            <label>Время
+              <input type="time" name="time" min="09:00" max="20:00" required>
+            </label>
+          </div>
+          <button type="submit" class="btn">Отправить заявку</button>
+          <p class="form__message" id="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> BLADE · барбер с выездом
+      <!-- Сайт учебный: честно предупреждаем, что данные выдуманы -->
+      <p class="footer__note">Учебный проект. Название, цены, контакты и отзывы вымышлены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
